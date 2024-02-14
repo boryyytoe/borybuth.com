@@ -2,6 +2,14 @@
 font-family: 'PT Sans', sans-serif;
 font-family: 'Rubik Doodle Shadow', system-ui;
 
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
 */
 html, 
 body {
@@ -10,7 +18,7 @@ body {
     
 }
 body {
-    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
     margin: 0 auto;
     padding: 0;
     /* border-radius: 2px 181px; */
@@ -34,11 +42,16 @@ h1, h2, h3, h4 {
     font-weight: 400;
     font-family: 'Rubik Doodle Shadow', Impact, 'Arial Narrow Bold', sans-serif, system-ui;
 }
-.h1 {font-size: 4rem;}
-.h1 span {display: block;    color: brown;
+.h1 {font-size: 4rem;} .h2 {font-size: 1.5rem;}
+.h1 span {
+    display: block;
+    color: brown;
     letter-spacing: -4px;
-    font-size: 162%;}
+    font-size: 162%;
+}
 
+
+.Rubik {font-family: 'Rubik Doodle Shadow', Impact, 'Arial Narrow Bold', sans-serif, system-ui;}
 
 .navBlock {
     display: grid;
