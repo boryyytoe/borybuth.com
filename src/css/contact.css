@@ -1,0 +1,28 @@
+body {
+    background-image: none;
+    background:#0b0b0b;
+    background-size: cover;
+    position: relative;
+    max-width: auto;
+}
+.siteBG {
+    background: none;
+    border-radius: 0;
+    padding: 2vw 3vw;
+    box-sizing: content-box;
+    margin: 1rem;
+    box-shadow:none;
+    clip-path:none;
+    transform: none;
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }

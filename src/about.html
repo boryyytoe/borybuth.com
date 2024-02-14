@@ -1,0 +1,76 @@
+---
+layout: "layouts/about.njk"
+title: About Me
+description: "My Story"
+---
+
+<style type="text/css">
+    .parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 4; }
+.div2 { grid-area: 1 / 4 / 2 / 6; }
+.div3 { grid-area: 2 / 1 / 3 / 6; }
+</style>
+
+<div class="siteBG">
+
+    <div class="container__main">
+
+        <div class="parent">
+
+            <div class="div1"> 
+                <div class="navBlock">
+                    <!-- <a href="about.html">About</a>
+                    <h1 class="nameTitle"><a href="/">Bory Buth</a></h1>
+                    <a href="contact.html">Contact</a> -->
+                    <nav>
+                        <ul>
+                            <li><a href="/about">My Story</a></li>
+                            <h1 class="nameTitle"><a href="/">Bory Buth</a></h1>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                         
+                <h1>Jack of all trades master of some</h1>
+                <p>Senior Designer/Developer for VSE Corporation with 17 years of experience. I work in IT under the Application Development group, where I'm responsible 
+                    for SharePoint dev &amp; administration, Power Apps Automation design &amp; development. I also provide web design and front-end development support.</p>
+                    <p>I like to take pictures.</p>
+                <p>I like to play guitar.</p>
+                <p>I like the Buffalo Bills.</p>                
+                </div><!-- /.navBlock -->
+            </div>
+        
+            <div class="div2">
+                <div class="profileImg">
+                    <img src="/assets/images/P7050810.webp" style="
+                    border-radius: 100%;
+                    max-width: 400px;
+                    filter: sepia(1);
+                    border: 6px solid #fff;
+                    justify-self: right">
+                </div><!-- /.profileImg -->
+        
+            </div>
+            <!-- <div class="div3">
+                <p>I like to take pictures.</p>
+                <p>I like to play guitar.</p>
+                <p>I like the Buffalo Bills.</p>
+                <p>I love my family.</p>      
+                <h1>Jack of all trades master of some</h1>
+                <p>Senior Designer/Developer for VSE Corporation with 17 years of experience. I work in IT under the Application Development group, where I'm responsible 
+                    for SharePoint dev &amp; administration, Power Apps Automation design &amp; development. I also provide web design and front-end development support.</p>
+                  
+        
+            </div> -->
+        </div><!-- /.parent -->
+        
+    </div><!-- /.container__main -->
+
+</div>
+
