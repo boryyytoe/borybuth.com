@@ -186,8 +186,8 @@ h1, h2, h3, h4 {
     grid-row: span 2;
 } */
 
-.gallery {position: relative;}
-.gallery div {position: absolute;}
+/* .gallery {position: relative;}
+.gallery div {position: absolute;} */
 
 div#About {
     display: flex;

@@ -1,5 +1,7 @@
 const Card = require('./src/_includes/components/Card');
 
+const ImageSize = require("image-size");
+
 module.exports = function(eleventyConfig){
     eleventyConfig.addPassthroughCopy("src/assets/");
     eleventyConfig.addPassthroughCopy("src/css/");

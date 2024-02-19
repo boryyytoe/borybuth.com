@@ -4,8 +4,18 @@ body {
     max-width: 1440px;
     text-align: center;
 }
-h1 {font-size:12vw;}
+h1 {
+  font-size: calc(40px + 8vw);
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (max-width: 425px) {
+  p:not(.h2){
+   text-align:left;
+  }
 
+}
 #About {
     margin:auto;
     max-width: 795px;    

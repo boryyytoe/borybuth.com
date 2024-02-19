@@ -1,0 +1,57 @@
+---
+layout: "layouts/wip.njk"
+title: Hello World
+description: "BoryButh.com"
+---
+
+
+ <div id="ImageGallery" class="images">    
+    <div class="gallery">
+        <!--
+        <div><img src="https://picsum.photos/seed/picsum/960/720"></div>
+        <div><img src="https://picsum.photos/960/720"></div>
+        <div class="vertical"><img src="https://picsum.photos/960/1280"></div>        
+        -->
+    </div>
+</div>
+
+<script>    
+    
+    const photographs = ["P8130197.webp", "P3083902-2.webp", "P9100447.webp", "P5130266.webp", "P8250057-2.webp", "PA310027-2.webp", "P9100327.webp", "P9100421.webp", "PB200358.webp", "P7311294.webp", "DSCN1213.webp", "P9100462.webp", "IMG_2717.webp", "P8070231.webp", "P3083945.webp", "P5130267.webp", "P7060691.webp", "PB200352.webp", "PB017905.webp", "P5115175.webp", "PB190203.webp", "PB210867.webp", "DSCN1061.webp", "PA310089.webp", "PA310185.webp", "P8011534.webp", "P4204792.webp", "P6290574.webp", "P3294510.webp", "P5265496.webp", "P5130262.webp", "IMG_0653.webp", "PB210779.webp", "PA290280.webp", "PA290293.webp", "P9100394.webp", "P7056693.webp", "P7020070.webp", "P2233516.webp", "P9011875.webp", "P2233523.webp", "P6286235.webp", "P3264399.webp", "IMG_2092.webp", "P6300216.webp", "PA290303.webp", "P2233506.webp", "P3094038.webp", "P7066755.webp", "IMG_0978.webp", "P5300132.webp", "P9100346.webp", "P7050521.webp", "P9060750.webp", "P7020174.webp", "P6290582-2.webp", "P4200130.webp", "P7301248-2.webp", "P5130265.webp", "P5130264.webp", "P5255383.webp", "P2233493.webp", "IMG_0810.webp", "P7050584.webp", "P5115249.webp", "IMG_0279.webp", "IMG_1005.webp", "IMG_2527.webp", "P7030056.webp", "P9010193.webp", "P3280023.webp", "P6296376.webp", "P5130263.webp", "PA290278.webp", "PA290305.webp", "P6290580.webp", "P6286346.webp", "P6216072.webp", "PA310018.webp", "IMG_1140.webp", "P3264405.webp", "IMG_1132.webp", "P6030033.webp", "PA310074.webp", "IMG_1102.webp", "P8240011-2.webp", "P4234861.webp", "P6290006.webp", "P6290567.webp", "P2229626.webp", "P7050649.webp", "P2050421.webp", "PA317878.webp", "P6085789.webp", "P2233518.webp", "P1010245.webp", "P8240001-2.webp", "IMG_1146.webp"];
+
+    const imgPath = "https://storage.googleapis.com/bb-photo-gallery-01/";
+
+    const galleryContainer = document.querySelector('gallery');
+
+    for (let i = 0; i < photographs.length; i++) {
+        
+        const img = new Image();
+        const div = document.createElement('div');        
+        img.src = imgPath + photographs[i];
+    
+        // Add an onload event listener to get the width and height after the image has loaded
+        img.onload = function() {
+        
+        const width = this.width;
+        const height = this.height;
+
+        if (height > width) {
+            div.classList.add("vertical");
+        }    
+        }; 
+        
+        div.appendChild(img);  
+        
+        //document.body.appendChild(div);    
+        //document.getElementById('ImageGallery').appendChild(div);
+        document.querySelector('.gallery').appendChild(div);
+        
+        // If the image fails to load, handle the error
+        img.onerror = function() {
+            console.error("Failed to load image:", this.src);
+        };
+
+    }
+  
+
+</script>
