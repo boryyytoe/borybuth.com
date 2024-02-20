@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="My personal website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>TEST</title>
+
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+
+    
+<link href="/css/temp.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+        overflow-x: hidden;
+        max-width:100%;
+        }
+        img {max-width:100%}
+        .full-screen {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        }
+
+        #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--color-just-black);
+        }
+
+        #masthead {
+        position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 9999;
+        left:0;
+        top:0;
+        }
+        #masthead a {
+        padding: 1rem 2rem;
+        }
+
+
+        #panels #panels-container {
+        height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ddd;
+        }
+        #panels #panels-container .panel {
+        color: var(--color-just-black);
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #f00;
+        }
+        #panels #panels-container .panel img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        }
+        #panels #panels-container .panel .panels-navigation {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        }
+        #panels #panels-container .panel .anchor-panel,
+        #panels #panels-container .panel .nav-panel {
+        text-transform: uppercase;
+        margin-right: 2rem;
+        }
+        #panels #panels-container .panels-navigation {
+        position: absolute;
+        width: 100%;
+        bottom: 2rem;
+        right: 2rem;
+        }
+        
+#Photos, #ImageGallery {
+    margin:auto;
+    max-width: 1440px;     
+}
+.gallery {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 365px;
+    grid-auto-flow: dense;
+}
+.horizontal {
+    grid-column: span 2;
+}
+.vertical {
+    grid-row: span 2;
+}
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.gallery div:nth-child(odd) img {
+    transform: rotate(2deg);    
+}
+.gallery div:nth-child(even) img {
+    transform: rotate(-2deg);    
+}
+.gallery div:nth-child(6n+1), .gallery .vertical {
+    position:relative;
+}
+.gallery div:nth-child(6n+1) img {
+    transform: rotate(5deg);
+}
+.gallery img {
+    border:20px solid #fff;
+    border-bottom-width: 80px;
+    box-shadow:0 0 15px rgb(0 0 0 / 50%),  0 0 1px rgba(255,255,255,0);
+    /* antialiasing to remove jagged edges in Chrome */
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-perspective: 1000;
+
+}
+.gallery .vertical {        
+    transform: rotate(-4deg);
+}
+.gallery .vertical img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.gallery div:nth-child(6n+1)::before, 
+.gallery .vertical::before {
+    content:"";
+    width:99%;
+    height:95%;
+    background:#fff;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    box-shadow:0 0 15px rgb(0 0 0 / 50%),  0 0 1px rgba(255,255,255,0);
+    transform: rotate(4deg);
+}
+.gallery div:nth-child(6n+1)::before {
+    transform: rotate(0deg);
+}
+    </style>
+  </head>
+  <body>
+        
+    <header id="masthead" class="site-header" role="banner">
+    <nav class="anchor-nav" role="navigation">
+        <ul>
+            <li><a href="#About" class="anchor">Home</a></li>
+                <!-- <a href="#panel-1" class="anchor">Panel 1</a>
+                <a href="#panel-3" class="anchor">Panel 3</a>
+                <a href="#panel-5" class="anchor">Panel 5</a> -->
+            <li><a href="#Photos" class="anchor">Photos</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="About">
+    <h1>Bory Buth</h1>    
+    <p class="h2">Jack of All Trades</p> 
+    <figure>
+        <img src="/assets/images/P7050810.webp" style="filter: sepia(1);">
+    </figure><!-- /.profileImg -->
+    <div id="Home">
+        <p class="h2"><span>Master of Some<span></p>
+        <p>Senior Designer/Developer for VSE Corporation with 17 years of experience.</p>
+        <p>I'm part of the AppDev team where I provide SharePoint Dev and Administration, working with SPFx to enhance UX and business needs. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. Finally, I manage our public-facing websites, designing and developing Grav, Drupal, Wordpress, Hugo, and Eleventy sites using HTML, CSS, and JavaScript.</p>
+        <p>I like to take <a href="#Photos" class="anchor">pictures</a>. I like to play guitar. I like dad jokes.</p>
+        <p>I solve problems.</p>
+        <p><a href="https://www.linkedin.com/in/chanbory-buth-422b424/" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
+    </div>
+</div>
+
+    <!-- <div id="feather" class="feather"></div> -->
+<!--   
+    <header id="masthead" class="site-header" role="banner">
+      <nav class="anchor-nav" role="navigation">
+        <a href="#About" class="anchor">Home</a>
+        <a href="#panel-1" class="anchor">Panel 1</a>
+        <a href="#panel-3" class="anchor">Panel 3</a>
+        <a href="#panel-5" class="anchor">Panel 5</a>
+        <a href="#Photos" class="anchor">Photos</a>
+      </nav>
+    </header>
+   -->
+    <main id="content" class="site-content" role="main">
+  
+      <section id="intro" class="full-screen pt-5 gradient-blue">
+        <h1>A cool title</h1>
+  
+        <div id="clouds-layer-1" class="clouds"></div>
+        <div id="clouds-layer-2" class="clouds"></div>
+      </section>
+  
+      <section id="panels">
+  
+        <div id="panels-container" style="width: 500%;">
+          <article id="panel-1" class="panel full-screen gradient-green">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">                 
+  
+                </div>
+                <div class="col-6 d-flex flex-column">
+  
+                  <h2>Panel 1</h2>
+  
+                  <p class="step-description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                  </p>
+  
+                  <div class="panels-navigation text-right">
+                    <div class="nav-panel" data-sign="plus"><a href="#panel-2" class="anchor">Next</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="panel-2" class="panel full-screen gradient-blue">
+            
+          </article>
+          <article id="panel-3" class="panel full-screen gradient-green">
+            
+          </article>
+          <article id="panel-4" class="panel full-screen gradient-blue">
+            
+          </article>
+          <article id="panel-5" class="panel full-screen gradient-green">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+  
+                  <img src="" alt="">
+  
+                </div>
+                <div class="col-6 d-flex flex-column">
+  
+                  <h2>Panel 5</h2>
+  
+                  <p class="step-description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                  </p>
+  
+                  <div class="panels-navigation text-right">
+                    <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+  
+      <section id="Photos" class="">
+        <div id="ImageGallery" class="images">    
+            <div class="gallery">
+                
+            </div>
+        </div>
+      </section>
+  
+    </main>
+  
+  
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script>
+    //gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+    /* Main navigation */
+    let panelsSection = document.querySelector("#panels"),
+        panelsContainer = document.querySelector("#panels-container"),
+        tween;
+    document.querySelectorAll(".anchor").forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            let targetElem = document.querySelector(e.target.getAttribute("href")),
+                y = targetElem;
+            if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+                let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
+                    totalMovement = (panels.length - 1) * targetElem.offsetWidth;
+                y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
+            }
+            gsap.to(window, {
+                scrollTo: {
+                    y: y,
+                    autoKill: false
+                },
+                duration: 1
+            });
+        });
+    });
+
+    /* Panels */
+    const panels = gsap.utils.toArray("#panels-container .panel");
+    tween = gsap.to(panels, {
+        xPercent: -100 * ( panels.length - 1 ),
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#panels-container",
+            pin: true,
+            start: "top top",
+            scrub: 1,
+            snap: {
+                snapTo: 1 / (panels.length - 1),
+                inertia: false,
+                duration: {min: 0.1, max: 0.1}
+            },
+            end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+        }
+    });
+
+    const photographs = ["P8130197.webp", "P3083902-2.webp", "P9100447.webp", "P5130266.webp", "P8250057-2.webp", "PA310027-2.webp", "P9100327.webp", "P9100421.webp", "PB200358.webp", "P7311294.webp", "DSCN1213.webp", "P9100462.webp", "IMG_2717.webp", "P8070231.webp", "P3083945.webp", "P5130267.webp", "P7060691.webp", "PB200352.webp", "PB017905.webp", "P5115175.webp", "PB190203.webp", "PB210867.webp", "DSCN1061.webp", "PA310089.webp", "PA310185.webp", "P8011534.webp", "P4204792.webp", "P6290574.webp", "P3294510.webp", "P5265496.webp", "P5130262.webp", "IMG_0653.webp", "PB210779.webp", "PA290280.webp", "PA290293.webp", "P9100394.webp", "P7056693.webp", "P7020070.webp", "P2233516.webp", "P9011875.webp", "P2233523.webp", "P6286235.webp", "P3264399.webp", "IMG_2092.webp", "P6300216.webp", "PA290303.webp", "P2233506.webp", "P3094038.webp", "P7066755.webp", "IMG_0978.webp", "P5300132.webp", "P9100346.webp", "P7050521.webp", "P9060750.webp", "P7020174.webp", "P6290582-2.webp", "P4200130.webp", "P7301248-2.webp", "P5130265.webp", "P5130264.webp", "P5255383.webp", "P2233493.webp", "IMG_0810.webp", "P7050584.webp", "P5115249.webp", "IMG_0279.webp", "IMG_1005.webp", "IMG_2527.webp", "P7030056.webp", "P9010193.webp", "P3280023.webp", "P6296376.webp", "P5130263.webp", "PA290278.webp", "PA290305.webp", "P6290580.webp", "P6286346.webp", "P6216072.webp", "PA310018.webp", "IMG_1140.webp", "P3264405.webp", "IMG_1132.webp", "P6030033.webp", "PA310074.webp", "IMG_1102.webp", "P8240011-2.webp", "P4234861.webp", "P6290006.webp", "P6290567.webp", "P2229626.webp", "P7050649.webp", "P2050421.webp", "PA317878.webp", "P6085789.webp", "P2233518.webp", "P1010245.webp", "P8240001-2.webp", "IMG_1146.webp"];
+
+    const imgPath = "https://storage.googleapis.com/bb-photo-gallery-01/";
+
+    const galleryContainer = document.querySelector('gallery');
+
+    for (let i = 0; i < photographs.length; i++) {
+        
+        const img = new Image();
+        const div = document.createElement('div');        
+        img.src = imgPath + photographs[i];
+    
+        // Add an onload event listener to get the width and height after the image has loaded
+        img.onload = function() {
+        
+        const width = this.width;
+        const height = this.height;
+
+        if (height > width) {
+            div.classList.add("vertical");
+        }    
+        }; 
+        
+        div.appendChild(img);  
+        
+        //document.body.appendChild(div);    
+        //document.getElementById('ImageGallery').appendChild(div);
+        document.querySelector('.gallery').appendChild(div);
+        
+        // If the image fails to load, handle the error
+        img.onerror = function() {
+            console.error("Failed to load image:", this.src);
+        };
+
+    }
+    </script>
+  </body>
+</html>
