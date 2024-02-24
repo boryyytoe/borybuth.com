@@ -3,16 +3,26 @@ layout: "layouts/test.njk"
 title: TEST
 description: "My personal website"
 ---
-<header id="masthead" class="site-header" role="banner">
+
+<!-- <header id="masthead" class="site-header" role="banner">
     <nav class="anchor-nav" role="navigation">
         <ul>
             <li><a href="#About" class="anchor">Home</a></li>
-                <!-- <a href="#panel-1" class="anchor">Panel 1</a>
-                <a href="#panel-3" class="anchor">Panel 3</a>
-                <a href="#panel-5" class="anchor">Panel 5</a> -->
+                
             <li><a href="#Photos" class="anchor">Photos</a></li>
         </ul>
     </nav>
+</header> -->
+<header id="masthead" class="site-header" role="banner">
+  <nav class="anchor-nav" role="navigation">
+    <a href="#About" class="anchor">Home</a>
+    <a href="#panel-1" class="anchor">Panel 1</a>
+    <a href="#panel-2" class="anchor">Panel 2</a>
+    <a href="#panel-3" class="anchor">Panel 3</a>
+    <a href="#panel-4" class="anchor">Panel 4</a>
+    <a href="#panel-5" class="anchor">Panel 5</a>
+    <a href="#Photos" class="anchor">Photos</a>
+  </nav>
 </header>
 <div id="About">
     <h1>Bory Buth</h1>    
@@ -23,101 +33,140 @@ description: "My personal website"
     <div id="Home">
         <p class="h2"><span>Master of Some<span></p>
         <p>Senior Designer/Developer for VSE Corporation with 17 years of experience.</p>
-        <p>I'm part of the AppDev team where I provide SharePoint Dev and Administration, working with SPFx to enhance UX and business needs. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. Finally, I manage our public-facing websites, designing and developing Grav, Drupal, Wordpress, Hugo, and Eleventy sites using HTML, CSS, and JavaScript.</p>
+        <p>I provide SharePoint Dev and Administration, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. In addition, I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
         <p>I like to take <a href="#Photos" class="anchor">pictures</a>. I like to play guitar. I like dad jokes.</p>
         <p>I solve problems.</p>
         <p><a href="https://www.linkedin.com/in/chanbory-buth-422b424/" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
     </div>
 </div>
 
-    <!-- <div id="feather" class="feather"></div> -->
-<!--   
-    <header id="masthead" class="site-header" role="banner">
-      <nav class="anchor-nav" role="navigation">
-        <a href="#About" class="anchor">Home</a>
-        <a href="#panel-1" class="anchor">Panel 1</a>
-        <a href="#panel-3" class="anchor">Panel 3</a>
-        <a href="#panel-5" class="anchor">Panel 5</a>
-        <a href="#Photos" class="anchor">Photos</a>
-      </nav>
-    </header>
-   -->
-    <main id="content" class="site-content" role="main">
+<!-- <div id="feather" class="feather"></div> -->
+
+
   
-      <section id="intro" class="full-screen pt-5 gradient-blue">
-        <h1>A cool title</h1>
+<main id="content" class="site-content" role="main">
   
-        <div id="clouds-layer-1" class="clouds"></div>
-        <div id="clouds-layer-2" class="clouds"></div>
+      <section id="intro" class="full-screen">
+        <h2 class="h1">My Story</h2>
+        <p>Thanks for visiting my site!</p>
+
+        <p>I'm out here in Baltimore by way of Upstate and Western NY.</p>
+        <p>When I'm not out solving the world's problems, my wife and I are raising our two boys the best way we know how, by creating memories.</p> 
+        
+        <hr>
+        <p>Oh...I'm also out here looking for a new job. After 14 years with the same company, albeit through various subsidaries, my journey will be taking a new direction.</p>
+        <p>Reach out if I can help solve some of your problems.</p>
       </section>
+
+      <!-- <section id="panels">
+        <div id="panels-container" style="width: 500%;">
+          <article id="panel-1" class="panel full-screen">
+            <video controls>
+              <source src="/assets/media/PXL_20230609_124753389-CINEMATIC.mp4" type="video/mp4">
+            </video>
+          </article>
+        </section>
+        <section id="panels">
+          <article id="panel-2" class="panel full-screen">
+            
+          </article>
+        </div>
+      </section> -->
   
       <section id="panels">
   
         <div id="panels-container" style="width: 500%;">
           <article id="panel-1" class="panel full-screen gradient-green">
-            <div class="container">
-              <div class="row">
-                <div class="col-6">                 
-  
+            <div class="container">                
+                  
+                  <div class="siteBG">
+                    <div class="container__main background-img">
+                      <h2>This is me on top of the highest mountain in the whole world...</h2>                        
+                    </div>                
                 </div>
-                <div class="col-6 d-flex flex-column">
-  
-                  <h2>Panel 1</h2>
-  
-                  <p class="step-description">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
-                  </p>
-  
                   <div class="panels-navigation text-right">
                     <div class="nav-panel" data-sign="plus"><a href="#panel-2" class="anchor">Next</a></div>
                   </div>
-                </div>
-              </div>
             </div>
           </article>
           <article id="panel-2" class="panel full-screen gradient-blue">
+            <h2 class="h1">This is me trying to be cool...</h2>
+        
             
+              <!-- <video controls>
+                    <source src="/assets/media/PXL_20230609_124753389-CINEMATIC.mp4" type="video/mp4">
+                  </video> 
+                
+                <iframe src="https://player.vimeo.com/video/911926922?badge=0autopause=1&player_id=0&app_id=58479&background=1&muted=0" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Big-Railroad-Blues">
+                  -->
+            <div id="myVideo"></div>        
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <script>
+                const videoOptions = {
+                    id:911926922,                          
+                    fullscreen:true,
+                    loop: true,
+                    title:false,
+                    autoplay:false,
+                    responsive: true,
+                    vimeo_logo: false,
+                    width:1200
+                }
+                const iframe = document.querySelector('#myVideo');
+                const player = new Vimeo.Player(iframe, videoOptions);
+                // player.setVolume(1);            
+                // player.on('play', function() {
+                //   console.log('Played the video');
+                //   pause();
+                // });            
+                // player.getVideoTitle().then(function(title) {
+                //   console.log('title:', title);
+                // });                
+              </script>
+              
+              <div class="panels-navigation text-right">
+                <div class="nav-panel" data-sign="plus"><a href="#panel-3" class="anchor">Next</a></div>
+              </div>
           </article>
           <article id="panel-3" class="panel full-screen gradient-green">
-            
+            <h2 style="color: #fff; background: #000; font-weight: 700;align-self: flex-start;justify-self: flex-start;">My Family Loves Me...</h2>
+            <img src="/assets/images/PB210779.webp" alt="My Family">
+            <div class="panels-navigation text-right">
+              <div class="nav-panel" data-sign="plus"><a href="#panel-4" class="anchor">Next</a></div>
+            </div>
           </article>
           <article id="panel-4" class="panel full-screen gradient-blue">
-            
+            <h2>This is where the magic happens...</h2>
+            <img src="/assets/images/PXL_20240222_215051722.jpg" alt="Workstation Photo">
+            <div class="panels-navigation text-right">
+              <div class="nav-panel" data-sign="plus"><a href="#panel-5" class="anchor">Next</a></div>
+            </div>
           </article>
           <article id="panel-5" class="panel full-screen gradient-green">
             <div class="container">
-              <div class="row">
-                <div class="col-6">
+              
+                
   
-                  <img src="" alt="">
-  
-                </div>
-                <div class="col-6 d-flex flex-column">
-  
-                  <h2>Panel 5</h2>
-  
+                  <h2>Panel 5</h2>  
                   <p class="step-description">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
-                  </p>
-  
+                  </p>  
                   <div class="panels-navigation text-right">
                     <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
                   </div>
-                </div>
-              </div>
+                
+              
             </div>
           </article>
         </div>
       </section>
   
-      <section id="Photos" class="">
-        <div id="ImageGallery" class="images">    
-            <div class="gallery">
-                
+      <section id="Photos" class="panel">
+        <div id="ImageGallery" class="images">
+            <div class="gallery">                  
             </div>
         </div>
       </section>
-  
-    </main>
-  
-  
+
+  </main>
+    
