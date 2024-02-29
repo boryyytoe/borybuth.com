@@ -14,9 +14,8 @@ description: "My personal website"
         <p class="h2"><span>Master of Some<span></p>
         <p>Senior Designer/Developer for VSE Corporation with over 18 years of experience.</p>
         <p>I provide SharePoint Dev and Administration, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. In addition, I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
-        <p>I like to take pictures. I like to play guitar. I like dad jokes.</p>
-        <p>I solve problems.</p>
-        <p><a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
+        <p>I like to <a href="#Photos">take pictures</a>. I like to <a href="#TheNuffs">play guitar</a>. I <a href="#PastWork">solve problems</a></p>        
+        <p><a href="/work">Past Work</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
     </div>
 </div>
 
@@ -36,7 +35,7 @@ description: "My personal website"
         <h2>This is me on top of the highest mountain in the whole world...</h2>
         <img src="/assets/images/P7060674-1920px.webp" alt="Photograph in ADK">
       </article>
-      <article id="panel-2" class="panel">
+      <article id="TheNuffs" class="panel">
         <h2 class="h1">This is me trying to be cool...</h2>
         <div id="myVideo"></div>        
         <script src="https://player.vimeo.com/api/player.js"></script>
@@ -65,6 +64,11 @@ description: "My personal website"
         <h2>This is where the magic happens...</h2>
         <img src="/assets/images/PXL_20240222_215051722.jpg" alt="Workstation Photo">
         
+      </article>
+      <article id="PastWork" class="panel">
+        <h2>My Work</h2>
+        <p class="h2"><a href="/work">View some of my past work</a></p>
+        <img src="/assets/images/work/mywork.webp" alt="comp">   
       </article>    
   </section>
 
@@ -75,7 +79,7 @@ description: "My personal website"
         </div>
     </div>
   </section>
-
+<button class="backToTop">Back Up ↑</button>
 <script>
 
 const photographs = ["P8130197.webp", "P3083902-2.webp", "P9100447.webp", "P5130266.webp", "P8250057-2.webp", "PA310027-2.webp", "P9100327.webp", "P9100421.webp", "PB200358.webp", "P7311294.webp", "DSCN1213.webp", "P9100462.webp", "IMG_2717.webp", "P8070231.webp", "P3083945.webp", "P5130267.webp", "P7060691.webp", "PB200352.webp", "PB017905.webp", "P5115175.webp", "PB190203.webp", "PB210867.webp", "DSCN1061.webp", "PA310089.webp", "PA310185.webp", "P8011534.webp", "P4204792.webp", "P6290574.webp", "P3294510.webp", "P5265496.webp", "P5130262.webp", "IMG_0653.webp", "PB210779.webp", "PA290280.webp", "PA290293.webp", "P9100394.webp", "P7056693.webp", "P7020070.webp", "P2233516.webp", "P9011875.webp", "P2233523.webp", "P6286235.webp", "P3264399.webp", "IMG_2092.webp", "P6300216.webp", "PA290303.webp", "P2233506.webp", "P3094038.webp", "P7066755.webp", "IMG_0978.webp", "P5300132.webp", "P9100346.webp", "P7050521.webp", "P9060750.webp", "P7020174.webp", "P6290582-2.webp", "P4200130.webp", "P7301248-2.webp", "P5130265.webp", "P5130264.webp", "P5255383.webp", "P2233493.webp", "IMG_0810.webp", "P7050584.webp", "P5115249.webp", "IMG_0279.webp", "IMG_1005.webp", "IMG_2527.webp", "P7030056.webp", "P9010193.webp", "P3280023.webp", "P6296376.webp", "P5130263.webp", "PA290278.webp", "PA290305.webp", "P6290580.webp", "P6286346.webp", "P6216072.webp", "PA310018.webp", "IMG_1140.webp", "P3264405.webp", "IMG_1132.webp", "P6030033.webp", "PA310074.webp", "IMG_1102.webp", "P8240011-2.webp", "P4234861.webp", "P6290006.webp", "P6290567.webp", "P2229626.webp", "P7050649.webp", "P2050421.webp", "PA317878.webp", "P6085789.webp", "P2233518.webp", "P1010245.webp", "P8240001-2.webp", "IMG_1146.webp"];
@@ -112,4 +116,12 @@ for (let i = 0; i < photographs.length; i++) {
     };
 
 }
+
+function scrollToTop() {    
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      })      
+    } 
+    const clickbutton = document.querySelector('.backToTop').addEventListener('click', scrollToTop);  
 </script>

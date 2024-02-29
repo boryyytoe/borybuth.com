@@ -36,6 +36,16 @@ body {
 }
 img {max-width: 100%;}
 
+.backToTop {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    text-shadow: 0 0px 18px #fff;
+}
+
 h1, h2, h3, h4 {
     text-transform:uppercase;
     letter-spacing:10px;
@@ -49,9 +59,18 @@ h1, h2, h3, h4 {
     letter-spacing: -4px;
     font-size: 162%;
 }
-
-
 .Rubik {font-family: 'Rubik Doodle Shadow', Impact, 'Arial Narrow Bold', sans-serif, system-ui;}
+
+nav.fixedNav {
+    position: fixed;
+    top: 0;
+    width: 10vw;
+    border: 1px solid;
+    left: 0;
+    text-align: left;
+    background: #f1efea;
+}
+nav ul li{list-style: none;margin:0;padding:0;}
 
 .navBlock {
     display: grid;

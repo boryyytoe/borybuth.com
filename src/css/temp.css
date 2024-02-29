@@ -11,7 +11,7 @@ h1 {
   padding: 0;
   margin: 0;
 }
-h1, h2, h3, h4 {background-color:#f1efea;}
+h1, h2, h3, h4, p {background-color:#f1efea;}
 
 #About {
     margin:auto;
@@ -104,6 +104,11 @@ section#Photos::after {
 #About, section#intro {
   box-shadow: 0 0 40px 0 #f1efea, 0 0 40px 100px #f1efea;
 }
+
+article#PastWork h2 {
+  margin-bottom: 0;
+}
+article#PastWork p.h2 {margin-bottom:1rem;}
 
 #Photos, #ImageGallery {
   margin:auto;
