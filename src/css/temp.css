@@ -6,7 +6,8 @@ body {
 }
 img {max-width:100%}
 h1 {
-  font-size: calc(40px + 8vw);
+  /* font-size: calc(40px + 8vw); */
+  font-size: clamp(3rem, 90vw, 10vw);
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -95,7 +96,8 @@ section#Photos::after {
 
 .panel h2 {  
   margin-bottom:9vh;  
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: clamp(2rem, 4rem, 10vw);
 }
 
 #About, section#intro {
@@ -183,9 +185,36 @@ article#PastWork p.h2 {margin-bottom:1rem;}
 }
 
 @media only screen and (max-width: 470px) {
+  body {padding-left:0;padding-right: 0;}
+  main {padding:3vw;}
+  
   p:not(.h2){
    text-align:left;
   }
-  .panel h2 {font-size:2.8rem;}
+  .panel h2 {    
+    font-size: clamp(2rem, 4rem, 6vw);
+  }
+  #myVideo, article img {
+    border: 11px solid #fff;    
+    margin:auto
+  }
+  section#Photos {
+      overflow-x: hidden;
+  }
+  /* .gallery img {max-width: 80%;}
+  
+  .gallery div:nth-child(6n+1)::before, 
+  .gallery .vertical::before {
+    display: none;
+  }
+  .vertical {grid-row: span 1;}
+  
+  .gallery div:nth-child(odd) img, 
+  .gallery div:nth-child(even) img,   
+  .gallery div:nth-child(6n+1) img, 
+  .gallery .vertical {
+    transform: rotate(0);
+  } */
+
 
 }
