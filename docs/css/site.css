@@ -17,6 +17,7 @@ body {
     padding: 0;
     
 }
+html {scroll-behavior: smooth;}
 body {
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     margin: 0 auto;

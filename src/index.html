@@ -14,7 +14,7 @@ description: "My personal website"
         <p class="h2"><span>Master of Some<span></p>
         <p>Senior Designer/Developer for VSE Corporation with over 18 years of experience.</p>
         <p>I provide SharePoint Dev and Administration, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. In addition, I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
-        <p>I like to <a href="#Photos">take pictures</a>. I like to <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a></p>        
+        <p>I <a href="#Photos">take pictures</a>. I <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a>.</p>        
         <p><a href="/work">Past Work</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
     </div>
 </div>
@@ -73,7 +73,7 @@ description: "My personal website"
   </section>
 
   <section id="Photos" class="panel">
-      <h2>These are my memories...</h2>
+    <h2>These are my memories...</h2>
     <div id="ImageGallery" class="images">
         <div class="gallery">                  
         </div>
@@ -126,7 +126,7 @@ function scrollToTop() {
 } 
 const clickbutton = document.querySelector('.backToTop').addEventListener('click', scrollToTop);  
 
-// Figure out how to keep hash in url for back button before doing this...
+// Better to use CSS instead of this...
 // Object.entries(document.querySelectorAll('[href^="#"]'))
 //     .forEach(([ index, node ]) => {
 //         node.addEventListener('click', (event) => {
@@ -135,6 +135,8 @@ const clickbutton = document.querySelector('.backToTop').addEventListener('click
 //                 top: document.querySelector(event.currentTarget.getAttribute('href')).getBoundingClientRect().top,
 //                 behavior: 'smooth'
 //             });
+//             console.log(this.getAttribute('node.value');
+            
 //         });
 //     });
     
