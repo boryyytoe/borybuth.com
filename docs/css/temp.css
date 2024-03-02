@@ -1,7 +1,7 @@
 body {
     margin:0 auto;
     padding: 2vw;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     text-align: center;
 }
 img {max-width:100%}

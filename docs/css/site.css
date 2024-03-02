@@ -9,8 +9,12 @@ font-family: 'Rubik Doodle Shadow', system-ui;
   font-style: normal;
 }
 
-
 */
+
+:root {
+    --main-bg-color: #f1efea;
+}
+
 html, 
 body {
     margin: 0;
@@ -23,10 +27,9 @@ body {
     margin: 0 auto;
     padding: 0;
     /* border-radius: 2px 181px; */
-    background: #f1efea;
+    background: var(--main-bg-color);
     /* background:url(../assets/images/3DWoodenWall.webp) no-repeat 0 0 #0b0b0b; */
     background-size: contain;
-
     /* border-top: 2px solid #d6d6d6;
     border-right: 4px solid #f7f7f7;
     border-bottom: 4px solid #f1f1f1;
