@@ -41,10 +41,11 @@ img {max-width: 100%;}
     position: fixed;
     bottom: 1vh;
     right: 1vw;
+    left: 1vw;
     border: 0;
     background: transparent;
     cursor: pointer;
-    text-shadow: 0 0px 18px #fff;
+    text-shadow: 0 0px 18px #fff, 0 0px 2px #fff;
 }
 
 h1, h2, h3, h4 {
