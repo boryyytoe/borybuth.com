@@ -205,15 +205,29 @@ article#PastWork p.h2 {margin-bottom:1rem;}
     border: 11px solid #fff;    
     margin:auto
   }
-  section#Photos {
+  /* section#Photos {
       overflow-x: hidden;
+  } */
+  .gallery {
+    grid-auto-rows: 240px;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+}
+  .gallery img {max-width: 95%;}
+  .gallery div:nth-child(odd) img {
+    transform: rotate(1deg);    
   }
-  /* .gallery img {max-width: 80%;}
+  .gallery div:nth-child(even) img {
+    transform: rotate(-1deg);    
+  }
+  .gallery div:nth-child(6n+1) img {
+    transform: rotate(2.5deg);
+  }
   
   .gallery div:nth-child(6n+1)::before, 
   .gallery .vertical::before {
     display: none;
   }
+  /* 
   .vertical {grid-row: span 1;}
   
   .gallery div:nth-child(odd) img, 
