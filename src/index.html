@@ -79,7 +79,7 @@ description: "My personal website"
         </div>
     </div>
   </section>
-<button class="backToTop">Back Up ↑</button>
+<button class="backToTop">Back Up</button>
 </main>
 
 <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script><script>
@@ -137,6 +137,24 @@ function scrollToTop() {
   })      
 } 
 const clickbutton = document.querySelector('.backToTop').addEventListener('click', scrollToTop);  
+
+const scrollToTopBtn = document.querySelector(".backToTop");
+const rootElement = document.documentElement;
+
+function handleScroll(){  
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  
+  if ((rootElement.scrollTop / scrollTotal ) > 0.10 ) {
+    // Show button
+    scrollToTopBtn.classList.add("showBtn")
+  } else {
+    // Hide button
+    scrollToTopBtn.classList.remove("showBtn")
+  }
+
+}
+document.addEventListener("scroll", handleScroll);
+
 
 // Better to use CSS instead of this...
 // Object.entries(document.querySelectorAll('[href^="#"]'))
