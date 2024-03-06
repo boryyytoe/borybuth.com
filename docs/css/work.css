@@ -55,6 +55,11 @@ header.df a {margin:0 2rem;}
   padding-bottom: 1rem;
 }
 
+section.demo-gallery {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 .demo-text .text {
   font-size: clamp(8rem, 15vw, 16rem);
   line-height: 1;
