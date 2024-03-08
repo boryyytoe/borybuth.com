@@ -25,6 +25,7 @@
     </script>
     
 <link href="/css/temp.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <meta property="og:title" content="Bory Buth: Web Designer/Developer" />
     <meta property="og:description" content="My Personal Website" />
@@ -44,16 +45,17 @@
     <main>
 <div id="About">
     <h1>Bory Buth</h1>    
-    <p class="h2">Jack of All Trades</p> 
+    <p>Jack of All Trades</p> 
     <figure>
         <img src="/assets/images/P7050810.webp" style="filter: sepia(1);">
     </figure><!-- /.profileImg -->
     <div id="Home">
         <p class="h2"><span>Master of Some<span></p>
-        <p>Senior Designer/Developer for VSE Corporation with over 18 years of experience.</p>
-        <p>I provide SharePoint Dev and Administration, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail Forms, JS, and SharePoint Lists to provide cloud and browser-based solutions. In addition, I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
+        <p>Senior Designer &amp; UI/UX Developer for VSE Corporation with over 18 years of experience.</p>
+        <p>I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
+        <p>In addition, I work in SharePoint, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail, JS, and SP Lists to provide cloud and browser-based solutions.</p>
         <p>I <a href="#Photos">take pictures</a>. I <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a>.</p>        
-        <p><a href="/work">Past Work</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://drive.google.com/file/d/1-vM-x__mXRHoBSBV8tYxUqA89n_TvrOU/view?usp=sharing" target="_blank">Resume</a> | <a href="https://codepen.io/boryyytoe" target="_blank">CodePen</a></p>
+        <p><a href="/work">Portfolio</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://storage.googleapis.com/bb-photo-gallery-01/Chanbory_Buth_web_resume.pdf" target="_blank">Resume</a></p>
     </div>
 </div>
 
@@ -69,11 +71,11 @@
 </section>
 
   <section id="panels">    
-      <article id="panel-1" class="panel">
+      <article id="panel-1" class="panel hidden">
         <h2>This is me on top of the highest mountain in the whole world...</h2>
         <img src="/assets/images/P7060674-1920px.webp" alt="Photograph in ADK">
       </article>
-      <article id="TheNuffs" class="panel">
+      <article id="TheNuffs" class="panel hidden">
         <h2 class="h1">This is me trying to be cool...</h2>
         <div id="myVideo"></div>        
         <script src="https://player.vimeo.com/api/player.js"></script>
@@ -93,24 +95,24 @@
           </script>
           
       </article>
-      <article id="panel-3" class="panel full-screen gradient-green">
+      <article id="panel-3" class="panel full-screen gradient-green hidden">
         <h2>My Family Loves Me...</h2>
         <img src="/assets/images/PB210779.webp" alt="My Family">
         
       </article>
-      <article id="panel-4" class="panel">
+      <article id="panel-4" class="panel hidden">
         <h2>This is where the magic happens...</h2>
-        <img src="/assets/images/PXL_20240222_215051722.jpg" alt="Workstation Photo">
+        <img src="/assets/images/PXL_20240222_215051722.jpg" alt="Workstation Photo" style="filter: saturate(0);transform: none;">
         
       </article>
-      <article id="PastWork" class="panel">
+      <article id="PastWork" class="panel hidden">
         <h2>My Work</h2>
         <p class="h2"><a href="/work">View some of my past work</a></p>
-        <img src="/assets/images/work/mywork.webp" alt="comp">   
+        <a href="/work"><img src="/assets/images/work/mywork.webp" alt="Image link to my portfolio"></a>
       </article>    
   </section>
 
-  <section id="Photos" class="panel">
+  <section id="Photos" class="panel hidden">
     <h2>These are my memories...</h2>
     <div id="ImageGallery" class="images">
         <div class="gallery">                  
@@ -194,6 +196,7 @@ function handleScroll(){
 document.addEventListener("scroll", handleScroll);
 
 
+
 // Better to use CSS instead of this...
 // Object.entries(document.querySelectorAll('[href^="#"]'))
 //     .forEach(([ index, node ]) => {
@@ -207,7 +210,23 @@ document.addEventListener("scroll", handleScroll);
             
 //         });
 //     });
-    
+
+//Scroll into view...Not sure I like this...
+// const observer = new IntersectionObserver ((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("show");
+//     } else {
+//       entry.target.classList.remove("show");
+//     }
+//   });
+
+// });
+
+// const hiddenElements = document.querySelectorAll(".hidden");
+// hiddenElements.forEach((el) => observer.observe(el));
+
 </script>
   </body>
 </html>
