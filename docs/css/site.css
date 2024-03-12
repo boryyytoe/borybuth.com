@@ -39,7 +39,9 @@ body {
     max-width: 1920px;
 }
 img {max-width: 100%;}
-
+a {transition: 0.3s; border-bottom:1px solid; text-decoration: none;}
+a:hover {border-color:#fff;opacity: 0.9;}
+nav {font-weight:lighter; font-size: 22px;}
 .backToTop {
     position: fixed;
     bottom: 1vh;
