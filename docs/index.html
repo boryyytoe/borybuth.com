@@ -42,7 +42,10 @@
   </head>
   <body>
     
-    <main>
+    <nav class="siteNav">          
+  <a href="/">Home</a> | <a href="/work">Portfolio</a> | <a href="https://borybuth.website" target="_blank">My Old Blog</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://storage.googleapis.com/bb-photo-gallery-01/Chanbory_Buth_web_resume.pdf" target="_blank">Resume</a>
+</nav>
+<main>
 <div id="About">
     <h1>Bory Buth</h1>    
     <p class="h2">Jack of All Trades</p> 
@@ -54,11 +57,8 @@
         <p>Senior Designer &amp; UI/UX Developer for VSE Corporation with over 18 years of experience.</p>
         <p>I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
         <p>In addition, I work in SharePoint, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail, JS, and SP Lists to provide cloud and browser-based solutions.</p>
-        <p>I <a href="#Photos">take pictures</a>. I <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a>.</p>        
-        <nav>          
-          <p><a href="/work">Portfolio</a> | <a href="https://borybuth.website" target="_blank">My Old Blog</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://storage.googleapis.com/bb-photo-gallery-01/Chanbory_Buth_web_resume.pdf" target="_blank">Resume</a></p>
-        </nav>
-    </div>
+        <p>I <a href="#Photos">take pictures</a>. I <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a>.</p>                
+    </div>    
 </div>
 
 
@@ -179,7 +179,6 @@ function scrollToTop() {
   })      
 } 
 const clickbutton = document.querySelector('.backToTop').addEventListener('click', scrollToTop);  
-
 const scrollToTopBtn = document.querySelector(".backToTop");
 const rootElement = document.documentElement;
 
@@ -188,7 +187,7 @@ function handleScroll(){
   
   if ((rootElement.scrollTop / scrollTotal ) > 0.10 ) {
     // Show button
-    scrollToTopBtn.classList.add("showBtn")
+    scrollToTopBtn.classList.add("showBtn");    
   } else {
     // Hide button
     scrollToTopBtn.classList.remove("showBtn")
@@ -198,6 +197,17 @@ function handleScroll(){
 document.addEventListener("scroll", handleScroll);
 
 
+let scrollpos = window.scrollY;
+const navbar = document.querySelector('.siteNav');
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY;
+  if (scrollpos >= 50) {
+    navbar.classList.add("dropshadow");
+  } else {
+    navbar.classList.remove("dropshadow");
+  }
+  
+})
 
 // Better to use CSS instead of this...
 // Object.entries(document.querySelectorAll('[href^="#"]'))

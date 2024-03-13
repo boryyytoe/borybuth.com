@@ -25,7 +25,7 @@ html {scroll-behavior: smooth;}
 body {
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    padding: 0;
+    padding:2rem max(2rem, 50vw - 100vw / 2);
     /* border-radius: 2px 181px; */
     background: var(--main-bg-color);
     /* background:url(../assets/images/3DWoodenWall.webp) no-repeat 0 0 #0b0b0b; */
@@ -40,8 +40,27 @@ body {
 }
 img {max-width: 100%;}
 a {transition: 0.3s; border-bottom:1px solid; text-decoration: none;}
-a:hover {border-color:#fff;opacity: 0.9;}
-nav {font-weight:lighter; font-size: 22px;}
+a:hover {border-color:transparent;opacity: 0.9;}
+nav {
+    font-weight: lighter;
+    font-size: clamp(13px, 3vw, 22px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    z-index: 9;
+    padding:0.4rem 0;
+    
+}
+nav a {margin:0 0.4rem;border:0;}
+nav a:hover {border-bottom:1px solid;opacity: 0.9;}
+.dropshadow {
+    filter:drop-shadow(0px 0px 3px rgba(0,0,0,0.2));    
+}
+
+
 .backToTop {
     position: fixed;
     bottom: 1vh;

@@ -44,8 +44,10 @@
   </head>
   <body>
         
-    <div id="About">
-  <a href="/">&larr; Go Back</a>
+    <nav class="siteNav">          
+  <a href="/">Home</a> | <a href="/work">Portfolio</a> | <a href="https://borybuth.website" target="_blank">My Old Blog</a> | <a href="https://www.linkedin.com/in/chanbory-buth-422b424" target="_blank">LinkedIn</a> | <a href="https://storage.googleapis.com/bb-photo-gallery-01/Chanbory_Buth_web_resume.pdf" target="_blank">Resume</a>
+</nav>
+<div id="About">  
   <h1 style="font-size: clamp(3rem, 90vw, 10vw); text-align: center;margin:0;"><a href="/" style=" border:0;">Bory Buth</a></h1>  
 </div>
 
@@ -250,6 +252,18 @@
 
     }
     document.addEventListener("scroll", handleScroll);
+
+    let scrollpos = window.scrollY;
+    const navbar = document.querySelector('.siteNav');
+    window.addEventListener('scroll', function() { 
+      scrollpos = window.scrollY;
+      if (scrollpos >= 50) {
+        navbar.classList.add("dropshadow");
+      } else {
+        navbar.classList.remove("dropshadow");
+      }
+      
+    })
 
     </script>
   </body>
