@@ -39,6 +39,7 @@ figure {
     clip-path: 
     polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
     max-width: 400px;
+    border:1px solid hsla(0, 0%, 0%, 0.1); 
   }
 
   hr {

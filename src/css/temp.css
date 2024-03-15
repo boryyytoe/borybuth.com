@@ -1,6 +1,5 @@
 body {
-    margin:0 auto;
-    padding: 2vw;
+    margin:0 auto;    
     /* max-width: 1440px; */
     text-align: center;
 }
@@ -40,6 +39,7 @@ figure {
     clip-path: 
     polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
     max-width: 400px;
+    border:1px solid hsla(0, 0%, 0%, 0.1); 
   }
 
   hr {
@@ -239,3 +239,11 @@ article#PastWork p.h2 {margin-bottom:1rem;}
 
 
 }
+/* 
+.hidden{
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 500ms;}
+.show{opacity: 1;
+  transform: translateY(0);
+} */

@@ -29,5 +29,8 @@
   <body>
     {# {% include "nav.html" %} #}
     {{ content | safe }}
+
+  {% block footer %}
+  {% endblock %}
   </body>
 </html>
