@@ -110,6 +110,19 @@ section#Photos::after {
   box-shadow: 0 0 40px 0 #f1efea, 0 0 40px 100px #f1efea;
 }
 
+#About img {
+  filter: sepia(0.7);
+}
+
+#About figure {  
+  /* antialiasing to remove jagged edges in Chrome */
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  transform: rotate(-1deg);
+  will-change: transform;
+  -webkit-perspective: 1000;
+}
+
 article#PastWork h2 {
   margin-bottom: 0;
 }
