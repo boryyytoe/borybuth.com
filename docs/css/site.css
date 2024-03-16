@@ -45,6 +45,7 @@ nav {
     text-align: center;
     z-index: 9;
     padding:0.4rem 0;
+    transition: all 0.3s ease 0s;
     
 }
 nav a {margin:0 0.4rem;border:0;}
@@ -266,10 +267,54 @@ div#About {
     align-items: center;
 }
 
-/* .scroll-watcher {
+
+
+.scroll-watcher {
     height: 10px;
     position:fixed;
     top:0;
     z-index: 1000;
     background-color: lime;
-} */
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+.dropshadow::after {
+    content: "";
+    height: 1px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    background-color: #fff;
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();    
+}
+
+@keyframes scroll-watcher {
+    to {scale: 1 1;}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    article img, #myVideo{
+        scale: 0.8; 
+        opacity: 0.8;
+        animation: fade-in linear forwards;
+        animation-timeline: view();    
+        animation-range: entry;
+        /* animation-range-start: contain;
+        animation-range-end: contain; */
+    }
+
+    @keyframes fade-in {
+        /* from {} */
+        to {scale: 1; opacity: 1;}
+    }
+
+}
