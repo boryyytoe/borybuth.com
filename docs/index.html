@@ -28,6 +28,7 @@
     
 <link href="/css/site.css" rel="stylesheet">
 <link href="/css/temp.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <meta property="og:title" content="Bory Buth: Web Designer/Developer" />
     <meta property="og:description" content="My Personal Website" />
@@ -49,38 +50,40 @@
 </nav>
 <main>
 <div id="About">
-    <h1>Bory Buth</h1>    
+    <h1 class="animate__animated animate__fadeInDownBig"><span>Bory</span> <span>Buth</span></h1>    
     <p class="h2">Jack of All Trades</p> 
     <figure>
         <img src="/assets/images/P7050810.webp">
     </figure><!-- /.profileImg -->
     <div id="Home">
-        <p class="h2"><span>Master of Some<span></p>
-        <p>Senior Designer &amp; UI/UX Developer for VSE Corporation with over 18 years of experience.</p>
-        <p>I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
-        <p>In addition, I work in SharePoint, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail, JS, and SP Lists to provide cloud and browser-based solutions.</p>
+        <p class="h2"><span>Master of Some</span></p>
+        <p>Front-end Developer</p>
+        <!-- <p>I manage our public-facing websites, maintaining, designing and developing websites in Grav, Drupal, WordPress, Hugo, and Eleventy using HTML, CSS, and JavaScript.</p>
+        <p>In addition, I work in SharePoint, working with SPFx to enhance user experience. I'm also creating low code solutions with Power Automate, Plumsail, JS, and SP Lists to provide cloud and browser-based solutions.</p> -->
         <p>I <a href="#Photos">take pictures</a>. I <a href="#myVideo">play guitar</a>. I <a href="#PastWork">solve problems</a>.</p>                
     </div>    
 </div>
 
 
 <section id="intro" class="full-screen">
-    <h2 class="h1">My Story</h2>
+  <div class="panel">
+    <h2 class="h1 animateMe">My Story</h2>
     <p>Thanks for visiting my site!</p>
     <p>I'm out here in Baltimore by way of Upstate and Western NY.</p>
     <p>When I'm not out solving the world's problems, my wife and I are raising our two boys the best way we know how, by creating memories.</p>     
     <hr>
     <p>Oh...I'm also out here looking for a new job. After 14 years with the same company, albeit through various subsidaries, my journey will be taking a new direction.</p>
     <p><a href="https://form.jotform.com/240567103142042" target="_blank">Reach out</a> if I can help solve some of your problems.</p>
+  </div>
 </section>
 
   <section id="panels">    
       <article id="panel-1" class="panel hidden">
-        <h2>This is me on top of the highest mountain in the whole world...</h2>
+        <h2 class="animateMe">This is me on top of the highest mountain in the whole world...</h2>
         <img src="/assets/images/P7060674-1920px.webp" alt="Photograph in ADK">
       </article>
       <article id="TheNuffs" class="panel hidden">
-        <h2 class="h1">This is me trying to be cool...</h2>
+        <h2 class="h1 animateMe">This is me trying to be cool...</h2>
         <div id="myVideo"></div>        
         <script src="https://player.vimeo.com/api/player.js"></script>
         <script>
@@ -100,24 +103,24 @@
           
       </article>
       <article id="panel-3" class="panel full-screen gradient-green hidden">
-        <h2>My Family Loves Me...</h2>
+        <h2 class="animateMe">My Family Loves Me...</h2>
         <img src="/assets/images/PB210779.webp" alt="My Family">
         
       </article>
       <article id="panel-4" class="panel hidden">
-        <h2>This is where the magic happens...</h2>
+        <h2 class="animateMe">This is where the magic happens...</h2>
         <img src="/assets/images/PXL_20240222_215051722.jpg" alt="Workstation Photo" style="filter: saturate(0);transform: none;">
         
       </article>
       <article id="PastWork" class="panel hidden">
-        <h2>My Work</h2>
+        <h2 class="animateMe">My Work</h2>
         <p class="h2"><a href="/work">View some of my past work</a></p>
         <a href="/work"><img src="/assets/images/work/mywork.webp" alt="Image link to my portfolio"></a>
       </article>    
   </section>
 
   <section id="Photos" class="panel hidden">
-    <h2>These are my memories...</h2>
+    <h2 class="animateMe">These are my memories...</h2>
     <div id="ImageGallery" class="images">
         <div class="gallery">                  
         </div>
@@ -160,17 +163,17 @@ for (let i = 0; i < photographs.length; i++) {
     if (height > width) {
         div.classList.add("vertical");
     }    
-    }; 
+  }; 
     
-    div.appendChild(img);  
+  div.appendChild(img);  
     
     //document.body.appendChild(div);    
     //document.getElementById('ImageGallery').appendChild(div);
-    document.querySelector('.gallery').appendChild(div);
+  document.querySelector('.gallery').appendChild(div);
         
-    img.onerror = function() {
-        console.error("Failed to load image:", this.src);
-    };
+  img.onerror = function() {
+      console.error("Failed to load image:", this.src);
+  };
 
 }
 
@@ -208,18 +211,70 @@ function handleScroll(){
 }
 document.addEventListener("scroll", handleScroll);
 
-
 let scrollpos = window.scrollY;
 const navbar = document.querySelector('.siteNav');
 window.addEventListener('scroll', function() { 
   scrollpos = window.scrollY;
   if (scrollpos >= 50) {
-    navbar.classList.add("dropshadow");
+    navbar.classList.add("dropshadow");    
+
   } else {
     navbar.classList.remove("dropshadow");
   }
   
 })
+
+const masterOfSome = document.querySelector("#Home .h2");
+// masterOfSome.classList.add('animate__animated', 'animate__wobble');
+
+// window.addEventListener('scroll', function() { 
+//   scrollpos = window.scrollY;
+//   if (scrollpos >= 150) {    
+//     masterOfSome.classList.add('animate__animated', 'animate__wobble');
+//   } else if (scrollpos === 0) {
+//     masterOfSome.classList.add('animate__animated', 'animate__wobble');
+//     console.log("top of the page");
+//   }
+  
+// })
+
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     const square = entry.target.querySelector('.animateMe');
+
+//     if (entry.isIntersecting) {
+//       square.classList.add('animate__animated', 'animate__headShake');
+//       console.log('classListAdd-square-animation');
+// 	  return; // if we added the class, exit the function
+//     }
+
+//     // We're not intersecting, so remove the class!
+//     square.classList.remove('animate__animated', 'animate__headShake');
+//     console.log('Remove-square-animation');
+//   });
+// });
+// observer.observe(document.querySelector('.panel'));
+
+// Create the observer like the examples above
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__animated', 'animate__rubberBand');
+      return;
+    }
+
+    entry.target.classList.remove('animate__animated', 'animate__rubberBand');
+  });
+});
+
+// Get multiple elements instead of a single one using "querySelectorAll"
+const squares = document.querySelectorAll('.animateMe');
+
+// Loop over the elements and add each one to the observer
+squares.forEach((element) => observer.observe(element));
+
+
+
 
 // Better to use CSS instead of this...
 // Object.entries(document.querySelectorAll('[href^="#"]'))
